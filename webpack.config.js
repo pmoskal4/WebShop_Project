@@ -50,6 +50,6 @@ module.exports = {
       template: path.join(__dirname, 'src/index.html'),
       hash: true
     }),
-    new ExtractTextPlugin('src/js/style.css')
+    new ExtractTextPlugin('src/css/main.css')
   ]
 }

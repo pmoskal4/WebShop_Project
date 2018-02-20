@@ -1,0 +1,49 @@
+* {
+  border: 1px solid red;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+#app {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 1000px;
+}
+
+.header {
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+}
+
+.logoTop {
+  justify-self: flex-start;
+  align-self: flex-start;
+  margin-right: auto;
+}
+
+.logBtn {
+  align-self: flex-start;
+}
+
+.basket {
+  align-self: flex-end;
+}
+
+.body {
+  height: 250px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.filterColumn {
+  width: 25%;
+}
+
+.productsDiv {
+  width: 75%
+}
