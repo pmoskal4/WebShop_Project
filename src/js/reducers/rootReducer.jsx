@@ -3,7 +3,7 @@ import { baseReducer } from './baseReducer.jsx';
 
 //creating root reducer
 const rootReducer = combineReducers({
-  base: baseReducer
+  itemsData: baseReducer
 });
 
 export default rootReducer;

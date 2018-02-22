@@ -1,7 +1,7 @@
 import * as firebase from 'firebase';
 
 // Initialize Firebase
-var config = {
+const config = {
   apiKey: "AIzaSyBl6EOzknHtkrxhFovlki9rNXNu51zdeuA",
   authDomain: "webshopproject-241b3.firebaseapp.com",
   databaseURL: "https://webshopproject-241b3.firebaseio.com",
@@ -12,6 +12,10 @@ var config = {
 firebase.initializeApp(config);
 
 // Get a reference to the database service
-var database = firebase.database().ref('/products');
+const database = firebase.database().ref('/products');
+
+database.once('value', snap => {
+  const itemsData = snap.val()
+});
 
 export default database;

@@ -2,9 +2,9 @@ import React from "react";
 import { connect } from "react-redux";
 
 import { getData } from "../database/getData.jsx";
-import ProductItems from './ProductItems.jsx';
+import FilterItems from './FilterItems.jsx';
 
-class Products extends React.Component {
+class SearchBox extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -15,8 +15,8 @@ class Products extends React.Component {
 
   render(){
     return (
-      <div className='productsColumn'>
-        <ProductItems itemsData={this.props.itemsData}/>
+      <div className='productsFilter'>
+        <FilterItems itemsData={this.props.itemsData}/>
       </div>
     )
   }
@@ -34,6 +34,6 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-Products = connect(mapStateToProps, mapDispatchToProps)(Products);
+SearchBox = connect(mapStateToProps, mapDispatchToProps)(SearchBox);
 
-export default Products;
+export default SearchBox;
