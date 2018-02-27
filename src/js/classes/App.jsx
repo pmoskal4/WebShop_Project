@@ -6,6 +6,7 @@ import Body from './Body.jsx'
 import Products from './Products.jsx'
 import SearchBox from './SearchBox.jsx'
 import Footer from './Footer.jsx'
+import ShoppingCart from './ShoppingCart.jsx'
 
 class App extends React.Component {
   constructor(props) {
@@ -17,7 +18,7 @@ class App extends React.Component {
       <Container>
         <Header>
           <h1 className='logoTop'>Warzywniak</h1>
-          <p className='shoppingCart'>Koszyk</p>
+          <ShoppingCart />
         </Header>
         <Body>
           <SearchBox />

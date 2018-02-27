@@ -16,7 +16,7 @@ class Products extends React.Component {
   render(){
     return (
       <div className='productsColumn'>
-        <ProductItems itemsData={this.props.itemsData}/>
+        <ProductItems itemsData={this.props.itemsData} cart={this.props.cart}/>
       </div>
     )
   }
@@ -24,7 +24,8 @@ class Products extends React.Component {
 
 function mapStateToProps(state) {
   return {
-    itemsData: state.itemsData
+    itemsData: state.itemsData,
+    cart: state.cart
   };
 }
 

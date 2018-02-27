@@ -1,4 +1,7 @@
 import React from "react";
+import { connect } from "react-redux";
+
+import { addToCart } from "../database/addToCart.jsx";
 
 class ProductItems extends React.Component {
   constructor(props) {
@@ -6,8 +9,10 @@ class ProductItems extends React.Component {
   }
 
   render(){
+
+    const { addProduct } = this.props;
     const products = this.props.itemsData.itemsData;
-    console.log(products);
+    console.log(this.props);
 
     if(products===undefined){
       return null;
@@ -18,7 +23,7 @@ class ProductItems extends React.Component {
             <img src={e.image} style={{width: '100%', height: 'auto'}}/>
             <p>{e.name}</p>
             <p>{e.price/10}zł</p>
-            <button>Dodaj</button>
+            <button onClick={addProduct}>Dodaj</button>
           </div>
         )
       });
@@ -30,5 +35,15 @@ class ProductItems extends React.Component {
     }
   }
 }
+
+const mapStateToProps= (state) => {
+  return { cart: state.cart }
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return { addProduct: () => dispatch(addToCart()) }
+};
+
+ProductItems = connect(mapStateToProps, mapDispatchToProps)(ProductItems);
 
 export default ProductItems;
