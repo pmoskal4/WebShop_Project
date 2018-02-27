@@ -26,12 +26,9 @@
   margin-right: auto;
 }
 
-.logBtn {
-  align-self: flex-start;
-}
-
-.basket {
-  align-self: flex-end;
+.shoppingCart {
+  margin-top: 25px;
+  margin-right: 25px;
 }
 
 .body {

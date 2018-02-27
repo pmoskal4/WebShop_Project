@@ -17,8 +17,7 @@ class App extends React.Component {
       <Container>
         <Header>
           <h1 className='logoTop'>Warzywniak</h1>
-          <p className='basket'>Koszyk</p>
-          <button className='logBtn'>Zaloguj / wyloguj</button>
+          <p className='shoppingCart'>Koszyk</p>
         </Header>
         <Body>
           <SearchBox />

@@ -11,9 +11,6 @@ import App from './classes/App.jsx'
 
 document.addEventListener('DOMContentLoaded', function(){
 
-
-
-
 const main = (
   <Provider store={ store }>
     <App />
