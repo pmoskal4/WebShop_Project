@@ -11,4 +11,5 @@ Wygenerowane komponenty na podstawie bazy danych.
 
 Funkcjonalność, nad która aktualnie pracuję:
 Możliwość dodawania produktów do koszyka,
-Dodanie opcji logowania użytkowników.
+Dodanie opcji logowania użytkowników,
+Warstwa wizualna.
