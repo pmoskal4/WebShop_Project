@@ -1,14 +1,6 @@
-import ActionTypes from '../constants/actionTypes.jsx';
-
-export function addToCart() {
-  return dispatch => {
-    dispatch(addItemToCart());
-    return this;
-  }
-}
-
-function addItemToCart() {
+export const addProductToCart = (product) => {
   return {
-    type: ActionTypes.AddToCart
-  };
-}
+    type: 'ADD_PRODUCT',
+    products: product
+  }
+};

@@ -1,17 +1,10 @@
-import ActionTypes from '../constants/actionTypes.jsx';
-
-export function cartReducer(state = {}, action) {
+export default (state = [], action) => {
   switch (action.type) {
-    case ActionTypes.AddToCart: {
-      return Object.assign({}, state, {
-        cart: { ...state, cart: this }
-      })
-    }
-    case ActionTypes.RemoveFromCart: {
-      return Object.assign({}, state, {
-        cart: this.cart
-      });
-    }
+    case 'ADD_PRODUCT':
+      return [
+        ...state,
+        Object.assign({}, action.products)
+      ];
     default:
       return state;
   }
